@@ -1,0 +1,84 @@
+/* ===========================
+   RESET CSS - SmartParking
+   =========================== */
+
+/* Réinitialisation générale */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Images et médias */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Formulaires */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Boutons */
+button {
+    cursor: pointer;
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Listes */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Tableaux */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+}
+
+/* Paragraphes */
+p {
+    overflow-wrap: break-word;
+}

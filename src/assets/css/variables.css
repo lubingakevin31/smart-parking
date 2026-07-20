@@ -35,6 +35,24 @@
     --shadow-sm: 0 4px 20px oklch(0% 0 0 / 3%);
     --shadow-md: 0 10px 30px oklch(55% 0.22 250 / 8%);
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* --- ESPACEMENTS --- */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+
+    /* --- LAYOUT & UTILS --- */
+    --container: 1280px;
+    --blur-md: blur(16px);
+    --header-height: 80px;
+
+    /* --- Z-INDEX --- */
+    --z-navbar: 1000;
+    --z-modal: 2000;
+    --z-toast: 3000;
 }
 
 /* --- CONFIGURATION DU THÈME SOMBRE --- */
@@ -50,37 +68,4 @@ body.dark-mode {
     --text-muted: oklch(65% 0.01 240);         
     --btn-text: oklch(12% 0.01 240);           
     --shadow-md: 0 10px 30px oklch(0% 0 0 / 30%);
-}
-
-/* ==========================================================================
-   RESETS & STYLES DE BASE
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-main);
-    color: var(--text-main);
-    background-color: var(--bg-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    
-    background-image: 
-        radial-gradient(circle at 85% 15%, var(--gradient-1) 0%, transparent 55%),
-        radial-gradient(circle at 15% 85%, var(--gradient-2) 0%, transparent 55%);
-    background-attachment: fixed;
-    transition: background-color var(--transition-smooth), color var(--transition-smooth);
-}
-
-.main-content {
-    flex: 1;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 120px 24px 64px 24px;
 }

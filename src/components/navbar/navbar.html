@@ -1,0 +1,90 @@
+
+<!-- 🚗 LA NAVBAR COMPLÈTE -->
+<header class="global-header">
+    <div class="navbar-container">
+        
+        <!-- CÔTÉ GAUCHE -->
+        <div class="nav-left">
+            <a href="../home/index.html" class="nav-logo">
+                <span>Smart<span class="accent-text">Parking</span></span>
+            </a>
+            <div class="live-badge">
+                <span class="pulse-dot"></span>
+                <span>127 places disponibles</span>
+            </div>
+            <div class="nav-search-bar">
+                <i data-lucide="search" style="width: 16px; height: 16px;"></i>
+                <input type="text" placeholder="Trouver un parking...">
+            </div>
+        </div>
+
+        <!-- CENTRE -->
+        <nav class="nav-center">
+            <a href="../home/index.html" class="nav-link">Accueil</a>
+            <a href="#parking-map" class="nav-link">Carte</a>
+            <a href="../dashboard/dashboard.html" class="nav-link" id="nav-desktop-dashboard">Dashboard</a>
+            <a href="#parkings-list" class="nav-link">Parkings</a>
+            <a href="../reservations/faq.html" class="nav-link active">Aide</a>
+        </nav>
+
+        <!-- CÔTÉ DROIT -->
+        <div class="nav-right">
+            
+            <!-- ÉTAT 1 : AVANT CONNEXION (Masqué par défaut) -->
+            <div class="auth-state-container" id="auth-logged-out" style="display: none;">
+                <select class="lang-select" aria-label="Sélecteur de langue">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                </select>
+                
+                <button id="theme-toggle-out" class="btn-icon" title="Changer de mode">
+                    <i data-lucide="moon" class="theme-icon-dark"></i>
+                    <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+                </button>
+                
+                <button class="btn-icon" id="login-nav-trigger" title="Connexion">
+                    <i data-lucide="key-round"></i>
+                </button>
+                
+                <button class="btn-primary-sm" id="register-nav-trigger">
+                    <span>Inscription</span>
+                </button>
+            </div>
+
+            <!-- ÉTAT 2 : APRÈS CONNEXION (Actif sur l'espace d'aide utilisateur) -->
+            <div class="auth-state-container" id="auth-logged-in" style="display: flex;">
+                <button id="theme-toggle" class="btn-icon" title="Changer de mode">
+                    <i data-lucide="moon" class="theme-icon-dark"></i>
+                    <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+                </button>
+
+                <button class="btn-icon" title="Notifications">
+                    <i data-lucide="bell"></i>
+                </button>
+                
+                <div class="user-profile-menu" id="profile-menu-container">
+                    <div class="avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&h=80&q=80" alt="Avatar">
+                    </div>
+                    <div class="profile-dropdown" id="user-profile-dropdown">
+                        <a href="../reservations/reservations.html"><i data-lucide="user"></i> Mon profil</a>
+                        <a href="#settings-modal"><i data-lucide="sliders"></i> Paramètres</a>
+                        <a href="#" class="logout-item" id="logout-nav-action"><i data-lucide="log-out"></i> Déconnexion</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton CTA Premium -->
+            <a href="#booking-section" class="btn-primary-sm" style="background: var(--success); color: #fff;">
+                <i data-lucide="calendar-check"></i>
+                <span>Réserver maintenant</span>
+            </a>
+
+            <!-- Hamburger Mobile -->
+            <button class="menu-toggle" id="hamburger-btn" aria-label="Ouvrir le menu mobile">
+                <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
+            </button>
+        </div>
+    </div>
+</header>
+

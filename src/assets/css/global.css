@@ -1,0 +1,312 @@
+/* ==========================================================================
+   GLOBAL.CSS - SmartParking
+   Styles communs à toutes les pages
+   ========================================================================== */
+
+
+/* ===========================
+   BODY
+=========================== */
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    background-image:
+        radial-gradient(circle at 85% 15%, var(--gradient-1) 0%, transparent 55%),
+        radial-gradient(circle at 15% 85%, var(--gradient-2) 0%, transparent 55%);
+
+    background-attachment: fixed;
+
+    transition:
+        background-color var(--transition-smooth),
+        color var(--transition-smooth);
+}
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container {
+    width: min(1280px, calc(100% - 48px));
+    margin: auto;
+}
+
+
+/* ===========================
+   MAIN
+=========================== */
+
+.main-content {
+    flex: 1;
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+
+
+/* ===========================
+   SECTION
+=========================== */
+
+.section {
+    padding: 96px 0;
+}
+
+
+/* ===========================
+   TITRES
+=========================== */
+
+.section-title {
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    margin-bottom: 16px;
+
+}
+
+
+.section-subtitle {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: var(--text-muted);
+
+    line-height: 1.7;
+
+}
+
+
+/* ===========================
+   BOUTONS
+=========================== */
+
+.btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+
+    transition: var(--transition-smooth);
+
+    cursor: pointer;
+
+}
+
+
+.btn-primary {
+
+    background: var(--primary-blue);
+
+    color: white;
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--primary-hover);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+
+.btn-secondary {
+
+    background: transparent;
+
+    border: 1px solid var(--card-border);
+
+    color: var(--text-main);
+
+}
+
+
+.btn-secondary:hover {
+
+    background: var(--card-bg);
+
+}
+
+
+/* ===========================
+   CARTES
+=========================== */
+
+.card {
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--radius-lg);
+
+    padding: 24px;
+
+    box-shadow: var(--shadow-sm);
+
+    backdrop-filter: blur(16px);
+
+}
+
+
+/* ===========================
+   GLASSMORPHISM
+=========================== */
+
+.glass {
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--card-border);
+
+    backdrop-filter: blur(16px);
+
+    border-radius: var(--radius-lg);
+
+}
+
+
+/* ===========================
+   GRID
+=========================== */
+
+.grid {
+
+    display: grid;
+
+    gap: 24px;
+
+}
+
+
+/* ===========================
+   FLEX
+=========================== */
+
+.flex {
+
+    display: flex;
+
+}
+
+.flex-center {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+/* ===========================
+   LIENS
+=========================== */
+
+a {
+
+    transition: var(--transition-smooth);
+
+}
+
+a:hover {
+
+    color: var(--primary-blue);
+
+}
+
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.fade-in {
+
+    animation: fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .section {
+
+        padding: 72px 0;
+
+    }
+
+    .container {
+
+        width: calc(100% - 32px);
+
+    }
+
+}
