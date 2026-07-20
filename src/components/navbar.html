@@ -1,1 +1,29 @@
 
+<header class="global-header">
+    <div class="navbar-container">
+        <!-- Lien vers l'accueil (Chemin relatif ajusté) -->
+        <a href="../home/index.html" class="nav-logo">
+            <i data-lucide="parking-square"></i>
+            <span>Smart<span class="accent-text">Parking</span></span>
+        </a>
+        
+        <!-- Navigation inter-pages -->
+        <nav class="nav-menu">
+            <a href="../home/index.html" class="nav-link" id="link-home">Accueil</a>
+            <a href="../dashboard/dashboard.html" class="nav-link" id="link-dashboard">Dashboard</a>
+            <a href="../reservations/reservations.html" class="nav-link" id="link-reservations">Réservations</a>
+        </nav>
+        
+        <!-- Actions Communes -->
+        <div class="nav-actions">
+            <button id="theme-toggle" class="btn-icon" aria-label="Changer de thème">
+                <i data-lucide="moon" class="theme-icon-dark"></i>
+                <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+            </button>
+            <button id="btn-login-trigger" class="btn-primary-sm">
+                <i data-lucide="user"></i>
+                <span>Connexion</span>
+            </button>
+        </div>
+    </div>
+</header>
