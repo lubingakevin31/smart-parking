@@ -2,107 +2,195 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartParking - Solution de Stationnement Intelligente</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>SmartParking</title>
-
-    <!-- CSS Global -->
+    <!-- CSS Global & Composants -->
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/variables.css">
     <link rel="stylesheet" href="../../assets/css/global.css">
-
-    <!-- Components -->
     <link rel="stylesheet" href="../../components/navbar/navbar.css">
     <link rel="stylesheet" href="../../components/footer/footer.css">
 
     <!-- CSS Home -->
     <link rel="stylesheet" href="./home.css">
-
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <div id="navbar"></div>
+    <!-- 1. NAVBAR (Fixe au-dessus du scroll) -->
+    <header class="navbar-fixed-wrapper">
+        <div id="navbar"></div>
+    </header>
 
-    <!-- Contenu -->
+    <!-- 2. MAIN CONTENT -->
     <main class="main-content">
+        
+        <!-- SECTION 1 : HERO COMPACTE ET DYNAMIQUE -->
+        <section class="main-hero-section" id="hero-section">
+            
+            <!-- Arrière-plan défilant/animé -->
+            <div class="hero-bg" id="hero-bg"></div>
+            <div class="glow-orb orb-1" id="orb-1"></div>
+            <div class="glow-orb orb-2" id="orb-2"></div>
 
-        <!-- HERO -->
+            <div class="hero-container container">
 
-        <!-- HERO -->
-        <!-- HERO -->
-        <section class="hero container">
+                <!-- GAUCHE : TEXTE & ACTIONS -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Disponible en temps réel</span>
+                    </div>
 
-            <!-- CÔTÉ GAUCHE : Texte & Actions (Étape 1.1) -->
-            <div class="hero-content">
+                    <h1 class="hero-title">
+                        Trouvez votre place de <span class="highlight-blue">parking</span> en quelques secondes.
+                    </h1>
 
-                <!-- Badge clignotant -->
-                <div class="hero-badge">
-                    <span class="pulse-dot"></span>
-                    <span>Disponible en temps réel</span>
+                    <p class="hero-subtitle">
+                        SmartParking vous aide à localiser, réserver et gérer vos places de parking en temps réel depuis une interface moderne et intuitive.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="../dashboard/index.html" class="btn btn-primary">Voir la carte</a>
+                        <a href="#features" class="btn btn-secondary">En savoir plus</a>
+                    </div>
                 </div>
 
-                <!-- Grand Titre -->
-                <h1 class="hero-title">
-                    Trouvez votre place de <span class="highlight-blue">parking</span> en quelques secondes.
-                </h1>
+                <!-- DROITE : CARROUSEL 3D EN ARC À 90 DEGRÉS -->
+                <div class="hero-visual">
+                    <div class="bracelet-wrapper" id="cadran-container">
+                        <div class="carousel-3d-bracelet" id="cadran-wheel">
+                            
+                            <div class="bracelet-item item-1" style="--i: 1;">
+                                <div class="card-inner glass">
+                                    <img src="./images/section1/adf.jpeg" alt="Parking Centre" class="sector-img">
+                                    <div class="sector-overlay">
+                                        <span class="status-pill status-green">🟢 12 places libres</span>
+                                        <strong class="parking-name">Parking Centre</strong>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Paragraphe explicatif -->
-                <p class="hero-subtitle">
-                    SmartParking vous aide à localiser, réserver et gérer vos places de parking en temps réel depuis une interface moderne et intuitive.
-                </p>
+                            <div class="bracelet-item item-2" style="--i: 2;">
+                                <div class="card-inner glass">
+                                    <img src="./images/section1/gth.jpeg" alt="Parking Gare" class="sector-img">
+                                    <div class="sector-overlay">
+                                        <span class="status-pill status-yellow">🟡 4 places libres</span>
+                                        <strong class="parking-name">Parking Gare</strong>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Boutons d'action -->
-                <div class="hero-actions">
-                    <a href="../dashboard/index.html" class="btn btn-primary">Voir la carte</a>
-                    <a href="#features" class="btn btn-secondary" id="btn-learn-more">En savoir plus</a>
+                            <div class="bracelet-item item-3" style="--i: 3;">
+                                <div class="card-inner glass">
+                                    <img src="./images/section1/adf.jpeg" alt="Parking Aéroport" class="sector-img">
+                                    <div class="sector-overlay">
+                                        <span class="status-pill status-green">🟢 45 places libres</span>
+                                        <strong class="parking-name">Parking Aéroport</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bracelet-item item-4" style="--i: 4;">
+                                <div class="card-inner glass">
+                                    <img src="./images/section1/SUZUKI.jpeg" alt="Parking Mairie" class="sector-img">
+                                    <div class="sector-overlay">
+                                        <span class="status-pill status-red">🔴 Complet</span>
+                                        <strong class="parking-name">Parking Mairie</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-        </section>
-        <!-- FEATURES -->
+            <!-- BANDEAU COMPACT DE STATISTIQUES EN CONTINU -->
+            <div class="ticker-live-bar glass">
+                <div class="live-indicator">
+                    <span class="red-pulse-dot"></span>
+                    <span>LIVE</span>
+                </div>
+                <div class="ticker-content">
+                    <div class="ticker-track">
+                        <div class="ticker-item">🅿️ <strong>127</strong> places libres</div>
+                        <div class="ticker-item">🚗 <strong>50</strong> réservations en cours</div>
+                        <div class="ticker-item">⭐ <strong>98%</strong> de satisfaction</div>
+                        <div class="ticker-item">⚡ <strong>24h/24</strong> disponibilité</div>
+                        <!-- Duplication pour boucle infinie -->
+                        <div class="ticker-item">🅿️ <strong>127</strong> places libres</div>
+                        <div class="ticker-item">🚗 <strong>50</strong> réservations en cours</div>
+                        <div class="ticker-item">⭐ <strong>98%</strong> de satisfaction</div>
+                        <div class="ticker-item">⚡ <strong>24h/24</strong> disponibilité</div>
+                    </div>
+                </div>
+            </div>
 
-        <section class="features container">
-
-        </section>
-
-        <!-- HOW IT WORKS -->
-
-        <section class="how-it-works container">
-
-        </section>
-
-        <!-- STATS -->
-
-        <section class="stats container">
-
-        </section>
-
-        <!-- TESTIMONIALS -->
-
-        <section class="testimonials container">
-
-        </section>
-
-        <!-- CTA -->
-
-        <section class="cta container">
+            <!-- BOUTON DÉCOUVRIR ERGONOMIQUE -->
+            <a href="#section-draft" class="btn-discover" aria-label="Découvrir la suite">
+                <span>Découvrir</span>
+                <span class="arrow-down">↓</span>
+            </a>
 
         </section>
+
+        <!-- SECTION VIDE : ESPACE DE TRAVAIL POUR DEMAIN (MÊME TAILLE) -->
+        <section class="main-hero-section section-draft" id="section-draft">
+            <div class="container draft-placeholder">
+                <div class="draft-badge">
+                    <span class="pulse-dot-orange"></span>
+                    <span>En construction — Espace réservé pour demain</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 : MINI FONCTIONNALITÉS (Taille ajustée) -->
+        <section class="mini-sections-grid container" id="features">
+            <div class="mini-card glass">
+                <div class="feature-icon">⚡</div>
+                <h3>Réservation Instantanée</h3>
+                <p>Bloquez votre place en 2 clics avant même de prendre le volant.</p>
+            </div>
+
+            <div class="mini-card glass">
+                <div class="feature-icon">🗺️</div>
+                <h3>Guidage GPS</h3>
+                <p>Itinéraire optimisé jusqu'à votre place assignée.</p>
+            </div>
+
+            <div class="mini-card glass">
+                <div class="feature-icon">💳</div>
+                <h3>Paiement Sécurisé</h3>
+                <p>Facturation automatique et sans contact.</p>
+            </div>
+
+            <div class="mini-card glass">
+                <div class="feature-icon">📊</div>
+                <h3>Temps Réel</h3>
+                <p>Mise à jour à la seconde près grâce à nos capteurs.</p>
+            </div>
+        </section>
+
+        <!-- CTA BANNER COMPACT -->
+        <div class="mini-cta-banner container glass">
+            <h2>Prêt à simplifier vos stationnements ?</h2>
+            <div class="cta-actions">
+                <button class="btn btn-primary" id="btn-cta-register">Créer un compte</button>
+                <a href="../faq/index.html" class="btn btn-secondary">FAQ</a>
+            </div>
+        </div>
 
     </main>
 
-    <!-- Footer -->
+    <!-- 3. FOOTER -->
     <div id="footer"></div>
 
+    <!-- Scripts JS -->
     <script src="../../js/main.js"></script>
-
     <script src="./home.js"></script>
 
 </body>

@@ -388,6 +388,6 @@ Voici la carte de route exacte :
 
     Étape 6 : Section CTA (Call To Action Final) & Finitions
 
-        Bannière d'incitation à télécharger l'application / créer un compte + vérification globale du responsive (mobile/tablette) et des animations JS.
+        Bannière d'incitation à t créer un compte + vérification globale du responsive (mobile/tablette) et des animations JS.
 
 On reste concentrés sur l'Étape 1.1 ! Une fois que tu as collé le morceau HTML dans ton fichier, dis-moi et on met le CSS pour styliser le texte et les boutons.
